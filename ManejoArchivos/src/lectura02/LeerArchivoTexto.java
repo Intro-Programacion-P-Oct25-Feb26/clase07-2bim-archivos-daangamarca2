@@ -24,6 +24,10 @@ public class LeerArchivoTexto {
                 List<String> lista = Arrays.asList(linea.split("\\|"));
                 ArrayList<String> linea_partes = new ArrayList<>(lista);
                 
+                /*
+                Nos ayuda a imprimir lo que vamos almacenando en el array dependiendo
+                de la posicion
+                */
                 
                 System.out.printf("%s\n", linea_partes.get(0));
                 System.out.printf("%s\n", linea_partes.get(1));
