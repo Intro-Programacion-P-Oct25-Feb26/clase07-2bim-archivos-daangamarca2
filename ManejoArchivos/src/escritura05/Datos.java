@@ -4,10 +4,42 @@
  */
 package escritura05;
 
+import java.util.Scanner;
+
 /**
  *
  * @author A S U S A16
  */
 public class Datos {
-    
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        boolean bandera = true;
+        while (bandera) {
+            String cadenaFinal = "";
+
+            System.out.println("Ingrese su nombre:");
+            String nombre = entrada.nextLine();
+            System.out.println("Ingrese su placa:");
+            String placa = entrada.nextLine();
+            System.out.println("Ingrese marca del vehiculo:");
+            String marca = entrada.nextLine();
+            System.out.println("Ingrese cedula:");
+            String cedula = entrada.nextLine();
+            System.out.println("¿Quiere agregar más datos (Si/No)?");
+            String valor = entrada.nextLine();
+
+            if (valor.equals("No")) {
+                bandera = false;
+            } else {
+                bandera = true;
+            }
+            cadenaFinal = String.format("%s%s %s %s\n", cadenaFinal,
+                    nombre,
+                    placa, marca, cedula);
+            escritura05.Procedimiento.agregarRegistros(cadenaFinal, placa);
+        }
+        entrada.close();
+    }
 }
